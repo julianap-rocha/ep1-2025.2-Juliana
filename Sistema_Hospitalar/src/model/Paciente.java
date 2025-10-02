@@ -42,6 +42,17 @@ public class Paciente extends Pessoa {
         return false;
     }
 
+    // Método para adicionar a consulta ao histórico do paciente.
+    public void adicionarConsulta(Consulta consulta) {
+        // Se a consulta for diferente de nulo
+        if (consulta != null) {
+            // E então adiciona a consulta no historico de consultas
+            this.historicoConsultas.add(consulta);
+            // Mensagem de confirmação
+            System.out.println("Consulta adicionada ao histórico do paciente " + this.getNome());
+        }
+    }
+
     // Getters e Setters
     public String getCpf() {
         return cpf;

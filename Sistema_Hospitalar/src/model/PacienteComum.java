@@ -17,6 +17,13 @@ public class PacienteComum extends Paciente {
         this.metodoPagamento = metodoPagamento;
     }
 
+    // Método para calcular o custo da consulta de um paciente comum
+    @Override
+    public double calcularCustoConsulta(double custoBase) {
+        // Como não tem o desconto do plano de saúde, só vai retornar o valor base.
+        return custoBase;
+    }
+
     // Getters e Setters
     public String getMetodoPagamento() {
         return metodoPagamento;
