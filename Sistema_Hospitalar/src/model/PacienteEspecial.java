@@ -17,6 +17,32 @@ public class PacienteEspecial extends Paciente {
         this.planoDeSaude = planoDeSaude;
     }
 
+    // Método para calcular o custo da consulta para pacientes especiais
+    @Override
+    public double calcularCustoConsulta(double custoBase) {
+        // Verifica se o paciente tem plano de saúde diferente de nulo
+        if (this.planoDeSaude != null) {
+            // Vai aplicar o desconto do plano de saúde
+            return this.planoDeSaude.aplicarDesconto(custoBase, this);
+        }
+        // Se for nulo retorna o custo base normal
+        return custoBase;
+    }
+
+    // Método para verificar se o paciente possui um plano de saúde
+    @Override
+    public boolean possuiPlano(String nomePlano) {
+        /*
+         * Verifica se o paciente tem plano de saúde diferente de nulo e se o nome do
+         * plano corresponde
+         */
+        if (this.planoDeSaude != null && this.planoDeSaude.getNomePlano().equalsIgnoreCase(nomePlano)) {
+            return true;
+        }
+        // Se as condições não forem verdadeiras retorna que não possui plano
+        return false;
+    }
+
     // Getters e Setters
     public PlanoDeSaude getPlanoDeSaude() {
         return planoDeSaude;

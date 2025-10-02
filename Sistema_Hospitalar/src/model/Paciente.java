@@ -26,6 +26,22 @@ public class Paciente extends Pessoa {
         this.historicoInternacoes = new ArrayList<>();
     }
 
+    /*
+     * Calcula o custo da consulta, se for um paciente comum, o valor final é o
+     * mesmo do valor base.
+     */
+    public double calcularCustoConsulta(double custoBase) {
+        return custoBase;
+    }
+
+    /*
+     * Verifica se um paciente tem um plano de saúde, se for um paciente comum a
+     * resposta é não.
+     */
+    public boolean possuiPlano(String nomePlano) {
+        return false;
+    }
+
     // Getters e Setters
     public String getCpf() {
         return cpf;
