@@ -10,7 +10,7 @@ public class Medico extends Pessoa {
     // Atributos classe Medico
     private String crm;
     private String especialidade;
-    private String custoConsulta;
+    private double custoConsulta;
     private List<LocalDateTime> agendaHorarios;
 
     // Construtor vazio
@@ -19,12 +19,18 @@ public class Medico extends Pessoa {
     }
 
     // Construtor com parâmetros
-    public Medico(String nome, String crm, String especialidade, String custoConsulta) {
+    public Medico(String nome, String crm, String especialidade, double custoConsulta) {
         super(nome);
         this.crm = crm;
         this.especialidade = especialidade;
         this.custoConsulta = custoConsulta;
         this.agendaHorarios = new ArrayList<>();
+    }
+
+    // Método para remover o horario
+    public void removerHorario(LocalDateTime horario) {
+        // Remove o horário da agenda.
+        this.agendaHorarios.remove(horario);
     }
 
     // Getters e Setters
@@ -44,11 +50,11 @@ public class Medico extends Pessoa {
         this.especialidade = especialidade;
     }
 
-    public String getCustoConsulta() {
+    public double getCustoConsulta() {
         return custoConsulta;
     }
 
-    public void setCustoConsulta(String custoConsulta) {
+    public void setCustoConsulta(double custoConsulta) {
         this.custoConsulta = custoConsulta;
     }
 
