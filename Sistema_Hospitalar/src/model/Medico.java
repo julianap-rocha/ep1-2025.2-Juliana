@@ -27,6 +27,33 @@ public class Medico extends Pessoa {
         this.agendaHorarios = new ArrayList<>();
     }
 
+    // Método para adicionar horário
+    public void adicionarHorario(LocalDateTime horario) {
+        // Verifica se o horário está disponível
+        if (verificarDisponibilidade(horario)) {
+            /// Se estiver disponível adiciona na agenda
+            this.agendaHorarios.add(horario);
+            // Mensagem de confirmação para o usuário
+            System.out.println("Horário agendado para: " + horario);
+        } else {
+            // Se não tiver horário emite o aviso
+            System.out.println("Erro: O horário está ocupado.");
+        }
+    }
+
+    // Verifica disponinonilidade na agenda
+    public boolean verificarDisponibilidade(LocalDateTime horario) {
+        // Passa por todos os horários já agendados
+        for (LocalDateTime horarioAgendado : this.agendaHorarios) {
+            // Se encontrar um horário no mesmo que queremos agendar retorna falso
+            if (horarioAgendado.equals(horario)) {
+                return false;
+            }
+        }
+        // Se não encontrar retorna verdadeiro
+        return true;
+    }
+
     // Método para remover o horario
     public void removerHorario(LocalDateTime horario) {
         // Remove o horário da agenda.

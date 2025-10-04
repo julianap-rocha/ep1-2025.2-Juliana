@@ -14,7 +14,7 @@ public class Internacao {
     private int quarto;
     private double custo;
     private String statusInternacao;
-    private List<Internacao> internacoesAtivas = new ArrayList<>();
+    private static List<Internacao> internacoesAtivas = new ArrayList<>();
 
     // Construtor vazio
     public Internacao() {
@@ -31,6 +31,57 @@ public class Internacao {
         this.custo = custo;
         this.statusInternacao = "Internado";
         internacoesAtivas.add(this);
+    }
+
+    // Método para chegar se o quarto está ocupado
+    public static boolean verificarOcupacao(int quarto) {
+        // Passa pelas internações ativas
+        for (Internacao internacao : internacoesAtivas) {
+            // Se encontrar um quarto com o mesmo número, retorna quarto ocupado
+            if (internacao.getQuarto() == quarto) {
+                return true;
+            }
+        }
+        // O quarto está livre
+        return false;
+    }
+
+    // Método para finalizar a internação
+    public void finalizarInternacao() {
+        // Verifica se a internação está ativa
+        if (!"Internado".equals(this.statusInternacao)) {
+            // Envia a mensagem pro usuário de que a internação não é ativa
+            System.out.println("Erro: A internação não está ativa.");
+            return;
+        }
+
+        // Se a internação existir atualiza o status
+        this.statusInternacao = "Finalizada";
+        // Registra o momento da alta
+        this.dataSaida = LocalDateTime.now();
+
+        // Remove da lista de ativos
+        internacoesAtivas.remove(this);
+
+        // Avisa ao paciente que a internação foi finalizada
+        System.out.println("Internação do paciente " + this.paciente.getNome() + " finalizada.");
+    }
+
+    // Método para finalizar a internação
+    public void cancelarInternacao() {
+        // Verifica se a internação é ativa
+        if (!"Internado".equals(this.statusInternacao)) {
+            // Envia mensagem pro usuário que a internação não é ativa
+            System.out.println("Erro: Esta internação não está ativa.");
+            return;
+        }
+        // Altera o status da internação pra cancelada
+        this.statusInternacao = "Cancelada";
+        // Remove da lista de ativos
+        internacoesAtivas.remove(this);
+
+        // Avisa ao paciente que a itnernação foi cancelada
+        System.out.println("Internação do paciente " + this.paciente.getNome() + " foi cancelada.");
     }
 
     // Getters e Setters
@@ -92,10 +143,6 @@ public class Internacao {
 
     public List<Internacao> getInternacoesAtivas() {
         return internacoesAtivas;
-    }
-
-    public void setInternacoesAtivas(List<Internacao> internacoesAtivas) {
-        this.internacoesAtivas = internacoesAtivas;
     }
 
 }
