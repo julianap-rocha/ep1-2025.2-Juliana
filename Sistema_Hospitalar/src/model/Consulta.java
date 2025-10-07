@@ -1,8 +1,9 @@
 package model;
 
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
-public class Consulta {
+public class Consulta implements DadoPersistente {
 
     // Atributos de Consulta
     private Paciente paciente; // Associação entre a Consulta e o Paciente
@@ -82,6 +83,41 @@ public class Consulta {
 
         // Repassa esse valor para o paciente calcular em plano de saude etc
         return this.paciente.calcularCustoConsulta(custoBase);
+    }
+
+    @Override
+    public String toCsvString() {
+        // Formata os dados do paciente especial para salvar
+
+        // Formata o estilo da data
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
+
+        // Se a data for diferente de nula formata ela
+        String dataFormatada;
+        if (getDataHora() != null) {
+            dataFormatada = getDataHora().format(formatter);
+        } else {
+            dataFormatada = "";
+        }
+
+        // Se cpf for diferente de nulo pega o cpf do paciente
+        String cpfPaciente;
+        if (getPaciente() != null) {
+            cpfPaciente = getPaciente().getCpf();
+        } else {
+            cpfPaciente = "";
+        }
+
+        // Se o medico for diferente de nulo, pega o crm do medico
+        String crmMedico;
+        if (getMedico() != null) {
+            crmMedico = getMedico().getCrm();
+        } else {
+            crmMedico = "";
+        }
+
+        return cpfPaciente + ";" + crmMedico + ";" + dataFormatada + ";" + getStatus() + ";" + getDiagnostico() + ";"
+                + getPrescricao();
     }
 
     // Getters e Setters

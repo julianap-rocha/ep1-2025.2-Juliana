@@ -24,6 +24,12 @@ public class PacienteComum extends Paciente {
         return custoBase;
     }
 
+      @Override
+    public String toCsvString() {
+        //Formata os dados do paciente comum para salvar
+        return getNome() + "," + getCpf() + "," + getIdade() + ",COMUM," + getMetodoPagamento();
+    }
+
     // Getters e Setters
     public String getMetodoPagamento() {
         return metodoPagamento;

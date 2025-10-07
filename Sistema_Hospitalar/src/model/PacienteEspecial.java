@@ -43,6 +43,22 @@ public class PacienteEspecial extends Paciente {
         return false;
     }
 
+    @Override
+    public String toCsvString() {
+        // Formata os dados do paciente especial para salvar
+
+        String nomePlano;
+
+        // Se o plano de saude for difernte de nulo, atribui o nome ao plano
+        if (this.getPlanoDeSaude() != null) {
+            nomePlano = this.getPlanoDeSaude().getNomePlano();
+        } else {
+            nomePlano = "";
+        }
+
+        return getNome() + "," + getCpf() + "," + getIdade() + ",ESPECIAL," + nomePlano;
+    }
+
     // Getters e Setters
     public PlanoDeSaude getPlanoDeSaude() {
         return planoDeSaude;

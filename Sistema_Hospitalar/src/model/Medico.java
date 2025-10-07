@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 //Medico herda de Pessoa para utilizar o atributo em comum
-public class Medico extends Pessoa {
+public class Medico extends Pessoa implements DadoPersistente {
 
     // Atributos classe Medico
     private String crm;
@@ -58,6 +58,12 @@ public class Medico extends Pessoa {
     public void removerHorario(LocalDateTime horario) {
         // Remove o horário da agenda.
         this.agendaHorarios.remove(horario);
+    }
+
+    @Override
+    public String toCsvString() {
+        //Formata os dados do medico para salvar
+        return getNome() + "," + getCrm() + "," + getEspecialidade() + "," + getCustoConsulta();
     }
 
     // Getters e Setters

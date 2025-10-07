@@ -1,6 +1,6 @@
 package model;
 
-public class PlanoDeSaude {
+public class PlanoDeSaude implements DadoPersistente {
 
     // Atributos da classe PlanoDeSaude
     private String nomePlano;
@@ -44,9 +44,15 @@ public class PlanoDeSaude {
 
     // Método PlanoDeSaude para saber se o plano é especial
     public boolean podeTerIntenacaoEspecial() {
+        return this.permiteInternacaoEspecial;
 
-        return this.podeTerIntenacaoEspecial();
+    }
 
+    @Override
+    public String toCsvString() {
+        // Formata os dados do plano de saude para salvar
+        return getNomePlano() + "," + getDescricaoPlano() + "," + getDescontoBase() + ","
+                + isPermiteInternacaoEspecial();
     }
 
     // Getters e Setters

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 //Paciente herda de Pessoa para utilizar o atributo em comum
-public class Paciente extends Pessoa {
+public abstract class Paciente extends Pessoa implements DadoPersistente {
 
     // Atributos de Pessoa
     private String cpf;
@@ -52,6 +52,9 @@ public class Paciente extends Pessoa {
             System.out.println("Consulta adicionada ao histórico do paciente " + this.getNome());
         }
     }
+
+    @Override
+    public abstract String toCsvString();
 
     // Getters e Setters
     public String getCpf() {
