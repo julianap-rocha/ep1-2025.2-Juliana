@@ -42,17 +42,16 @@ Desenvolvimento de um sistema de gerenciamento hospitalar utilizando os conceito
 ## Prints da Execução
 
 1. Menu Principal:  
-   ![<img width="360" height="162" alt="CadastroDeMedico" src="https://github.com/user-attachments/assets/07ec0950-5b6e-40f4-94c8-0c1c2204ce12" />
-]()
-)
+   <img width="341" height="157" alt="MenuPrincipal" src="https://github.com/user-attachments/assets/4a99020e-9d59-40e4-8a18-ad860cbe225b" />
+
 
 2. Cadastro de Médico:  
-   ![<img width="341" height="157" alt="MenuPrincipal" src="https://github.com/user-attachments/assets/5982ecd0-0dbc-47dc-9d86-a9e85b528a23" />
-]
+   <img width="360" height="162" alt="CadastroDeMedico" src="https://github.com/user-attachments/assets/e264f846-0d41-4e33-88d2-50012f2527eb" />
+
 
 3. Relatório de Pacientes Cadastrados:  
-   ![<img width="497" height="198" alt="RelatorioPacientesCadastrados" src="https://github.com/user-attachments/assets/c8064999-bddb-4802-b2e9-76a149f43895" />
-]
+   <img width="497" height="198" alt="RelatorioPacientesCadastrados" src="https://github.com/user-attachments/assets/a710fa00-0ecf-434e-b131-97465ef0483e" />
+
 
 ---
 
