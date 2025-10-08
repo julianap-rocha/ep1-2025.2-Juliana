@@ -42,7 +42,8 @@ Desenvolvimento de um sistema de gerenciamento hospitalar utilizando os conceito
 ## Prints da Execução
 
 1. Menu Principal:  
-   ![Inserir Print 1](C:\Users\julia\OneDrive\Desktop\CloneGitSH\ep1-2025.2-Juliana\Prints/CadastroDeMedico.png)
+   ![Inserir Print 1](<img width="360" height="162" alt="CadastroDeMedico" src="https://github.com/user-attachments/assets/0d999cd4-b9e3-40b0-ab31-6379f069f2c8" />
+)
 
 2. Cadastro de Médico:  
    ![Inserir Print 2](caminho/do/print2.png)
