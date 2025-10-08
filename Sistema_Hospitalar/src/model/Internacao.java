@@ -141,7 +141,7 @@ public class Internacao {
         this.statusInternacao = statusInternacao;
     }
 
-    public List<Internacao> getInternacoesAtivas() {
+    public static List<Internacao> getInternacoesAtivas() {
         return internacoesAtivas;
     }
 

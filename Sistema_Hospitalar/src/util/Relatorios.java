@@ -63,8 +63,10 @@ public class Relatorios {
             // Inicia um contador de consultas
             int consultasRealizadas = 0;
             for (Consulta consulta : todasAsConsultas) {
-                // Verifica se tem médico, se é o mesmo médico do for e se tem o status de
-                // concluida
+                /*
+                 * Verifica se tem médico, se é o mesmo médico do for e se tem o status de
+                 * concluida
+                 */
                 if (consulta.getMedico() != null && consulta.getMedico().equals(medico)
                         && "Concluida".equals(consulta.getStatus())) {
                     consultasRealizadas++;
