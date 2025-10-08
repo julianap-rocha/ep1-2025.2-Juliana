@@ -42,7 +42,8 @@ Desenvolvimento de um sistema de gerenciamento hospitalar utilizando os conceito
 ## Prints da Execução
 
 1. Menu Principal:  
-   ![Inserir Print 1](<img width="360" height="162" alt="CadastroDeMedico" src="https://github.com/user-attachments/assets/0d999cd4-b9e3-40b0-ab31-6379f069f2c8" />
+   ![<img width="360" height="162" alt="CadastroDeMedico" src="https://github.com/user-attachments/assets/774a49b5-dfa7-4a70-9fd4-4d6b143a83bc" />
+](![Uploading CadastroDeMedico.png…]()
 )
 
 2. Cadastro de Médico:  
