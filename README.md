@@ -8,34 +8,45 @@ Implementar um *Sistema de Gerenciamento Hospitalar* em *Java, aplicando conceit
 
 Desenvolvimento de um sistema de gerenciamento hospitalar utilizando os conceitos de orientação a objetos (herança, polimorfismo e encapsulamento) e persistência de dados em arquivos.
 
+## Diagrama do Projeto
+
+<img width="931" height="602" alt="Diagrama do Projeto" src="https://github.com/user-attachments/assets/7fc2359c-6dcd-4682-ab62-54ff618e864a" />
+
+
 ## Dados do Aluno
 
-- **Nome completo:** [Preencher aqui]
-- **Matrícula:** [Preencher aqui]
-- **Curso:** [Preencher aqui]
-- **Turma:** [Preencher aqui]
+- **Nome completo:** [Juliana Pereira da Rocha]
+- **Matrícula:** [251037125]
+- **Curso:** [Engenharias]
+- **Turma:** [06]
 
 ---
 
 ## Instruções para Compilação e Execução
 
 1. **Compilação:**  
-   [Descrever aqui como compilar o projeto. Exemplo: `javac Main.java` ou o script usado]
+   [No diretório src da pasta Sistema Hospitalar, execute o script `javac app/*.java model/*.java util/*.java`]
 
 2. **Execução:**  
-   [Descrever aqui como executar o projeto. Exemplo: `java Main` ou o script usado]
+   [No mesmo diretório src da pasta Sistema Hospitalar, execute o script `java app.Main`]
 
 3. **Estrutura de Pastas:**  
-   [Descrever aqui as principais pastas do projeto]
+   [No projeto existem 3 pastas principais:
+   
+   `model:` Contém toda a base do sistema, `Consulta, DadoPersistente, Internacao, Medico, Paciente, Paciente Comum, Paciente Especial, Pessoa, Plano de Saúde`
+   
+   `util:`Contém todas as classes de utilidade do sistema, `Persistencia, Relatorios`
+   
+   `app:` Contém a classe main que é responsável pela execução, `Main`]
 
 3. **Versão do JAVA utilizada:**  
-   [Descrever aqui como versão do JAVA utilizada no projeto. Sugestão: `java 21`]
+   [O projeto foi desenvolvido utilizando o `java 21`]
 
 ---
 
 ## Vídeo de Demonstração
 
-- [Inserir o link para o vídeo no YouTube/Drive aqui]
+- [https://www.youtube.com/watch?v=NjoJeGp4vrM]
 
 ---
 
@@ -59,13 +70,13 @@ Desenvolvimento de um sistema de gerenciamento hospitalar utilizando os conceito
 
 ## Observações (Extras ou Dificuldades)
 
-- [Espaço para o aluno comentar qualquer funcionalidade extra que implementou, dificuldades enfrentadas, ou considerações importantes.]
+- [O desenvolvimento desse projeto foi uma experiência complicada, mas com um grande aprendizado. Desde o início, o mais importante pra mim foi o planejamento para saber como começar, e por conta disso eu criei um diagrama para guiar na implementação. Um dos principais desafios foi interações com muitas classes, listas e funcionalidades diferentes, e eu precisei ver muitos vídeos para resolver minhas dúvidas. Além disso, me adaptar a trabalhar com o Git, tendo que realizar commits de forma consistente, foi um novo aprendizado. Apesar de todos esses desafios, a experiência de aplicar esses conceitos na prática, como comentários nos códigos, resolver bugs, foi muito gratificante e me deixou motivada para o próximo projeto.]
 
 ---
 
 ## Contato
 
-- [Opcional: E-mail pessoal do aluno.]
+- [julianapereirarocha2007@gmail.com]
 
 ---
 
