@@ -244,7 +244,7 @@ public class Persistencia {
     }
 
     private static Medico buscarMedicoPorCrm(String crm, List<Medico> medicos) {
-        // Pasa pelos objetos da lista
+        // Passa pelos objetos da lista
         for (Medico m : medicos) {
             // Verifica se o crm que estamos procurando é igual a um da lista
             if (m.getCrm().equals(crm)) {

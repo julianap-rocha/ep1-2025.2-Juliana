@@ -3,6 +3,9 @@ package model;
 import java.util.ArrayList;
 import java.util.List;
 
+/*Paciente é abstract porque é um conceito genérico.
+ No sistema temos classes mais específicas*/
+
 //Paciente herda de Pessoa para utilizar o atributo em comum
 public abstract class Paciente extends Pessoa implements DadoPersistente {
 

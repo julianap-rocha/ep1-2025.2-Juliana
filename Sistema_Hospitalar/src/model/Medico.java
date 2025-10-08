@@ -62,7 +62,7 @@ public class Medico extends Pessoa implements DadoPersistente {
 
     @Override
     public String toCsvString() {
-        //Formata os dados do medico para salvar
+        // Formata os dados do medico para salvar
         return getNome() + "," + getCrm() + "," + getEspecialidade() + "," + getCustoConsulta();
     }
 
