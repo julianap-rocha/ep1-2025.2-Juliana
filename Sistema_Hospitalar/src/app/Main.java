@@ -19,6 +19,7 @@ import util.Relatorios;
 
 public class Main {
 
+    // Listas que vão armazenar os dados
     private static List<Paciente> pacientes = new ArrayList<>();
     private static List<Medico> medicos = new ArrayList<>();
     private static List<PlanoDeSaude> planos = new ArrayList<>();
@@ -26,11 +27,16 @@ public class Main {
 
     public static void main(String[] args) {
 
+        // Carrega todos os dados salvos
         Persistencia.carregarDados(planos, medicos, pacientes, consultas);
 
+        // Cria a instância do scanner e adapta para que os números sejam lidos com .
         Scanner sc = new Scanner(System.in).useLocale(Locale.US);
+
+        // Varíavel que mantém o menu principal executando
         boolean executando = true;
 
+        // Menu principal
         while (executando) {
             System.out.println("\n===== SISTEMA HOSPITALAR =====");
             System.out.println("1. Gerenciar Cadastros");
@@ -46,9 +52,12 @@ public class Main {
 
                 switch (opcao) {
                     case 1:
+                        // O for é para que as informações não fiquem se acumulando e deixe o terminal
+                        // mais limpo
                         for (int i = 0; i < 50; i++) {
                             System.out.println();
                         }
+                        // Chama o método
                         menuCadastros(sc);
                         break;
                     case 2:
@@ -77,6 +86,7 @@ public class Main {
                     default:
                         System.out.println("ERRO: Opção inválida! Tente novamente.");
                 }
+                // Se o usuário não digitar um número inteiro
             } catch (InputMismatchException e) {
                 System.out.println("ERRO: Por favor, digite apenas números para as opções do menu.");
                 sc.nextLine();
@@ -85,6 +95,9 @@ public class Main {
         sc.close();
     }
 
+    // Os outros menus seguem o mesmo padrão do anterior
+
+    // Menu cadastros
     public static void menuCadastros(Scanner sc) {
         boolean sair = false;
         while (!sair) {
@@ -131,6 +144,7 @@ public class Main {
         }
     }
 
+    // Menu consultas
     public static void menuConsultas(Scanner sc) {
         boolean sair = false;
         while (!sair) {
@@ -177,6 +191,7 @@ public class Main {
         }
     }
 
+    // Menu internações
     public static void menuInternacoes(Scanner sc) {
         boolean sair = false;
         while (!sair) {
@@ -223,6 +238,7 @@ public class Main {
         }
     }
 
+    // Menu Relatórios
     public static void menuRelatorios(Scanner sc) {
         boolean sair = false;
         while (!sair) {
@@ -285,8 +301,10 @@ public class Main {
         }
     }
 
+    // Métodos
     public static void cadastrarPaciente(Scanner sc) {
         System.out.println("\n--- Cadastro de Paciente ---");
+        // Pede os dados
         System.out.print("Nome: ");
         String nome = sc.nextLine();
         System.out.print("CPF: ");
@@ -297,9 +315,11 @@ public class Main {
             int idade = sc.nextInt();
             sc.nextLine();
 
+            // Define se o paciente criado vai ser especial ou comum
             System.out.print("Possui plano de saúde? (S/N): ");
             String possuiPlano = sc.nextLine();
 
+            // Verifica se tem planos criados
             if (possuiPlano.equalsIgnoreCase("S")) {
                 if (planos.isEmpty()) {
                     System.out.println("ERRO: Nenhum plano cadastrado.");
@@ -332,6 +352,8 @@ public class Main {
             sc.nextLine();
         }
     }
+
+    // Os outros métodos seguem o mesmo padrão
 
     public static void cadastrarMedico(Scanner sc) {
         System.out.println("\n--- Cadastro de Médico ---");
