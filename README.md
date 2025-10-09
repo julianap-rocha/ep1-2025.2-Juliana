@@ -25,10 +25,10 @@ Desenvolvimento de um sistema de gerenciamento hospitalar utilizando os conceito
 ## Instruções para Compilação e Execução
 
 1. **Compilação:**  
-   [No diretório bin da pasta Sistema Hospitalar, execute o script `javac app/*.java model/*.java util/*.java`]
+   [No diretório src da pasta Sistema Hospitalar, execute o script `javac app/Main.java `]
 
 2. **Execução:**  
-   [No mesmo diretório bin da pasta Sistema Hospitalar, execute o script `java app.Main`]
+   [No mesmo diretório src da pasta Sistema Hospitalar, execute o script `java app/Main`]
 
 3. **Estrutura de Pastas:**  
    [No projeto existem 3 pastas principais:
